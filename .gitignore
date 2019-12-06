@@ -1,0 +1,7 @@
+node_modules/
+.cache
+yarn.lock
+dist/
+./Natours/assets/sa-video.mp4
+
+Natours/assets/sa-video.mp4

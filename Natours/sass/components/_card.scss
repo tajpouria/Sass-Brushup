@@ -1,0 +1,181 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 35rem;
+
+  &__side {
+    height: 35rem;
+    width: 27rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: $shadow-light;
+    transition: all 0.7s ease;
+
+    &--front {
+      background-color: $color-light;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-orange,
+          $color-dark-orange
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-green,
+          $color-dark-green
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light-blue,
+          $color-dark-blue
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__heading {
+    background-size: cover;
+    height: 15rem;
+    background-blend-mode: screen;
+    border-radius: 3px;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-light-orange,
+          $color-dark-orange
+        ),
+        url(../assets/person.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-light-green,
+          $color-dark-green
+        ),
+        url(../assets/person.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-light-blue,
+          $color-dark-blue
+        ),
+        url(../assets/person.jpg);
+    }
+  }
+
+  &__title {
+    color: $color-light;
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    width: 50%;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  &__title-span {
+    padding: 1rem;
+    line-height: 3rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-orange, 0.85),
+        rgba($color-dark-orange, 0.85)
+      );
+    }
+
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-green, 0.85),
+        rgba($color-dark-green, 0.85)
+      );
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-blue, 0.85),
+        rgba($color-dark-blue, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      height: 20rem;
+      margin: 0 auto;
+      padding-top: 1rem;
+
+      li {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-bg-light;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    text-align: center;
+    width: 90%;
+  }
+
+  &__cta-info {
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+    color: $color-light;
+  }
+
+  &__cta-only {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  &__cta-price {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+}
