@@ -11,6 +11,9 @@
   border-radius: 10rem;
   transition: all 0.2s;
 
+  // CHANGES FOR <button> element
+  border: none;
+
   &::after {
     content: "";
     position: absolute;
@@ -37,6 +40,12 @@
   &:active {
     transform: translate(0, -0.3rem);
     box-shadow: 0 1rem 1rem rgba($color-light-grey, 0.2);
+    outline: none;
+  }
+
+  &:focus {
+    box-shadow: 0 1rem 1rem rgba($color-light-grey, 0.2);
+    outline: none;
   }
 
   &--white {

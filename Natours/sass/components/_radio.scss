@@ -1,0 +1,48 @@
+.radio {
+  &__group {
+    display: inline-block;
+    width: 49%;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    position: absolute;
+    padding-left: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__button {
+    height: 2.2rem;
+    width: 2.2rem;
+    border: 3.5px solid $color_dark_green;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: -0.7rem;
+    top: -0.3rem;
+
+    &::after {
+      content: "";
+      height: 0.95rem;
+      width: 0.95rem;
+      border-radius: 50%;
+      background-color: $color_dark_green;
+      display: block;
+      top: 0.3rem;
+      left: 0.3rem;
+      position: absolute;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  &__input:checked + &__label > &__button::after {
+    opacity: 1;
+  }
+}
