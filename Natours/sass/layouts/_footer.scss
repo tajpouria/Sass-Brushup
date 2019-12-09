@@ -1,0 +1,67 @@
+.footer {
+  background-color: $color-dark-grey;
+  height: 30rem;
+
+  &__logo-box {
+    padding: 2rem 0 3rem 0;
+  }
+
+  &__logo {
+    background-image: linear-gradient(
+        to right bottom,
+        $color-light-green,
+        $color-dark-green
+      ),
+      url(../assets/person.jpg);
+    height: 10rem;
+    width: 10rem;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  &__copy-right {
+    color: $color-light-grey-1;
+    width: 80%;
+    float: right;
+    padding-top: 2rem;
+    border-top: 1px solid $color-light-grey;
+    list-style: none;
+    font-size: 1.5rem;
+  }
+
+  &__navigation {
+    display: inline-block;
+    padding-top: 2rem;
+    border-top: 1px solid $color-light-grey;
+    list-style: none;
+  }
+
+  &__navigation-item {
+    display: inline-block;
+    color: $color-dark-green;
+
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+
+  &__link {
+    transition: all 0.2s;
+    backface-visibility: hidden;
+
+    &:link,
+    &:active,
+    &:visited {
+      color: $color-light-grey-1;
+      text-decoration: none;
+      padding: 0 0.7rem;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: $color-dark-green;
+    }
+  }
+}
