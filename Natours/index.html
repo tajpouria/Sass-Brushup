@@ -167,7 +167,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section id="#section-tours" class="section-tours">
         <div class="u-center-text u-margin-bottom--large">
           <h2 class="heading__secondary">
             Most popular tours
@@ -200,7 +200,7 @@
                     <p class="card__cta-only">Only</p>
                     <p class="card__cta-price">$497</p>
                   </div>
-                  <div class="btn btn--white">Book now</div>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
                     <p class="card__cta-only">Only</p>
                     <p class="card__cta-price">$497</p>
                   </div>
-                  <div class="btn btn--white">Book now</div>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -262,7 +262,7 @@
                     <p class="card__cta-only">Only</p>
                     <p class="card__cta-price">$497</p>
                   </div>
-                  <div class="btn btn--white">Book now</div>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -402,14 +402,15 @@
         </div>
       </section>
 
-      <div class="popup">
+      <div class="popup" id="popup">
         <div class="popup__content">
+          <a href="#section-tours" class="popup__close-icon">&times;</a>
           <div class="popup__left">
             <img src="./assets/person.jpg" alt="jane" class="popup__img" />
             <img src="./assets/person.jpg" alt="jane" class="popup__img" />
           </div>
           <div class="popup__right">
-            <h2 class="heading__secondary">
+            <h2 class="heading__secondary u-margin-bottom--small">
               We make people genuinely happy
             </h2>
             <h3 class="heading__tertiary u-margin-bottom--small">
@@ -429,7 +430,7 @@
               sint nam, corporis doloribus animi voluptas! Quam ex obcaecati
               necessitatibus voluptates tenetur quod sunt beatae!
             </p>
-            <div class="u-margin-top--small">
+            <div class="u-margin-top--medium">
               <button type="submit" href="#" class="btn btn--green">
                 Next step &rarr;
               </button>

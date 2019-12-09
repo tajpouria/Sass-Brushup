@@ -4,30 +4,68 @@
   left: 0;
   right: 0;
   height: 100vh;
-
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
   background-color: rgba($color-dark, 0.8);
+
+  &__close-icon {
+    font-size: 2rem;
+    text-decoration: none;
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    color: $color-dark-grey;
+    transition: color 0.2s;
+    line-height: 1;
+
+    &:hover {
+      color: $color-light-green;
+    }
+  }
 
   &__content {
     @include absolute-center;
-    height: 40rem;
-    width: 40rem;
     display: table;
+    background-color: $color-light;
+    padding: 4rem 7rem;
+    border-radius: 3px;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 0.5s 0.1s;
   }
 
   &__left {
+    display: table-cell;
+    width: 40rem;
+  }
+
+  &__right {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 2rem;
   }
 
   &__img {
-    height: 50%;
-    width: 50%;
+    width: 30rem;
+    margin: -2px;
   }
 
   &__text {
     column-count: 2;
     column-gap: 3rem;
-    column-rule: 3px solid $color-dark-grey;
-    color: $color-light-grey-1;
-
+    column-rule: 3px solid $color-light-grey;
+    color: $color-dark-grey;
+    font-size: 1.2rem;
     hyphens: auto;
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
