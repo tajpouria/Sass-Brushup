@@ -1,0 +1,33 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+
+  background-color: rgba($color-dark, 0.8);
+
+  &__content {
+    @include absolute-center;
+    height: 40rem;
+    width: 40rem;
+    display: table;
+  }
+
+  &__left {
+  }
+
+  &__img {
+    height: 50%;
+    width: 50%;
+  }
+
+  &__text {
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 3px solid $color-dark-grey;
+    color: $color-light-grey-1;
+
+    hyphens: auto;
+  }
+}
