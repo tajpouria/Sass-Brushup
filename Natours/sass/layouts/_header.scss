@@ -12,6 +12,16 @@
   -webkitclip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @include respond(tab-land) {
+    -webkitclip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @include respond(phone) {
+    -webkitclip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+  }
+
   &__logo-box {
     position: absolute;
     left: 1.2rem;

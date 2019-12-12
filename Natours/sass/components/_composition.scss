@@ -1,6 +1,11 @@
 .composition {
   position: relative;
   z-index: 1;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
+
   &__photo {
     position: absolute;
     outline-offset: 1.5rem;
@@ -9,17 +14,45 @@
     box-shadow: 0 1.5rem 4rem rgba($color: $color-dark, $alpha: 0.4);
     border-radius: 2px;
 
+    @include respond(tab-port) {
+      margin-top: 2rem;
+      position: relative;
+      width: 25%;
+    }
+
     &--p1 {
-      left: 8rem;
-      top: -3rem;
+      left: auto;
+      top: 3rem;
+
+      @include respond(tab-port) {
+        left: 5rem;
+        top: 1rem;
+        transform: scale(0.9);
+      }
     }
     &--p2 {
       right: 0;
       top: 0;
+
+      @include respond(tab-port) {
+        right: auto;
+        top: auto;
+        z-index: 1;
+        transform: scale(1.1);
+      }
     }
+
     &--p3 {
       left: 12rem;
       top: 6rem;
+
+      @include respond(tab-port) {
+        left: auto;
+        top: auto;
+        right: 5rem;
+        top: 1rem;
+        transform: scale(0.9);
+      }
     }
 
     &:hover {

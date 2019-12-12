@@ -2,6 +2,10 @@
   padding: 4rem 5rem;
   width: 50%;
 
+  @include respond(tab-port) {
+    width: auto;
+  }
+
   &__group {
     &:not(:last-child) {
       padding: 1rem 0;
@@ -22,6 +26,10 @@
     color: $color-light-grey;
     border-bottom: 3px solid transparent;
     transition: all 0.3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       border-bottom: 3px solid $color-dark-orange;

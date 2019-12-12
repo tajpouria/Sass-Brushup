@@ -16,7 +16,6 @@ html {
 
 body {
   font-family: "Courier New", Courier, monospace, sans-serif;
-  padding: 3.5rem;
   box-sizing: border-box;
   color: $color-light-grey;
 }
@@ -39,6 +38,11 @@ body {
       letter-spacing: 3.5rem;
       animation: move-in-left 1s ease-in-out;
       text-transform: uppercase;
+
+      @include respond(phone) {
+        letter-spacing: 3rem;
+        font-size: 4rem;
+      }
     }
     &--sub {
       display: block;
@@ -47,6 +51,11 @@ body {
       letter-spacing: 1.3rem;
       animation: move-in-right 1s ease-in-out;
       text-transform: uppercase;
+
+      @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -57,7 +66,7 @@ body {
       $color-light-green,
       $color-dark-green
     );
-    background-clip: text;
+    background-clip: initial;
     -webkit-background-clip: text;
     color: transparent;
     font-size: 3.5rem;
@@ -66,6 +75,15 @@ body {
     white-space: nowrap;
     letter-spacing: 0.2rem;
     transition: all 0.2s;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
 
     &:hover {
       transform: skew(15deg, 2deg) scale(1.1);
@@ -77,6 +95,11 @@ body {
     font-size: $default-font-size;
     text-transform: uppercase;
     font-weight: 700;
+
+    @include respond(tab-port) {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -85,5 +108,10 @@ body {
 
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  @include respond(tab-port) {
+    width: 80%;
+    margin: 0 auto;
   }
 }

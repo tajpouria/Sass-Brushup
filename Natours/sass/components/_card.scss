@@ -4,9 +4,14 @@
   position: relative;
   height: 35rem;
 
+  @include respond(tab-port) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
   &__side {
     height: 35rem;
-    width: 27rem;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -169,7 +174,6 @@
     text-transform: uppercase;
     color: $color-light;
   }
-
   &__cta-only {
     font-size: 1.5rem;
     padding-bottom: 1rem;
@@ -177,5 +181,52 @@
   &__cta-price {
     font-size: 5rem;
     font-weight: 100;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+
+    &__side {
+      position: relative;
+      top: auto;
+      left: auto;
+      box-shadow: $shadow-light;
+
+      &--back {
+        height: 25rem;
+        background-color: $color-light;
+        transform: translateY(-1rem) rotateY(0deg);
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__details {
+      ul {
+        list-style: none;
+        height: 20rem;
+        margin: 0 auto;
+        padding-top: 1rem;
+
+        li {
+          text-align: center;
+          font-size: 1.2rem;
+          padding: 1rem;
+          width: 80%;
+          margin: 0 auto;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-bg-light;
+          }
+        }
+      }
+    }
+
+    &__cta-info {
+      padding-bottom: 0;
+    }
   }
 }

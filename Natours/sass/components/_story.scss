@@ -9,8 +9,20 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
+  @include respond(phone) {
+    transform: none;
+  }
+
   & > * {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: none;
+    }
   }
 
   &__title {
@@ -31,6 +43,10 @@
     border-radius: 50%;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+
+    @include respond(phone) {
+      transform: translateX(-3rem);
+    }
   }
   &__img {
     height: 100%;

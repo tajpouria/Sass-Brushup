@@ -29,6 +29,12 @@
     border-top: 1px solid $color-light-grey;
     list-style: none;
     font-size: 1.5rem;
+
+    @include respond(tab-port) {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__navigation {
@@ -36,6 +42,11 @@
     padding-top: 2rem;
     border-top: 1px solid $color-light-grey;
     list-style: none;
+
+    @include respond(tab-port) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__navigation-item {

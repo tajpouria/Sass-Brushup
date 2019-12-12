@@ -6,6 +6,16 @@
     top: 4rem;
     right: 4rem;
     border-radius: 50%;
+
+    @include respond(tab-port) {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    @include respond(phone) {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 
   &__background {
@@ -24,6 +34,7 @@
 
   &__list {
     @include absolute-center;
+    position: fixed;
     list-style: none;
     z-index: 9;
     opacity: 0;
@@ -36,10 +47,12 @@
   }
 
   &__link {
+    font-size: 3rem;
+    white-space: nowrap;
+
     &:link,
     &:visited {
       display: block;
-      font-size: 3rem;
       color: $color-light;
       text-decoration: none;
       text-transform: uppercase;
@@ -62,10 +75,18 @@
       background-position: 100%;
       transform: translateX(3rem);
     }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
   }
 
   &__num {
     margin-right: 2rem;
+
+    @include respond(phone) {
+      margin-right: 1rem;
+    }
   }
 
   &__checkbox {

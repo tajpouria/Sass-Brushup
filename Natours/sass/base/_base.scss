@@ -8,4 +8,9 @@
 
 body {
   box-sizing: border-box;
+  padding: 3.5rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
 }

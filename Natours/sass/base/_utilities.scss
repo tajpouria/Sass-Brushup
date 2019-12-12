@@ -13,10 +13,18 @@
 
   &--large {
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &--huge {
     margin-bottom: 10rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 8rem;
+    }
   }
 }
 
@@ -31,9 +39,17 @@
 
   &--large {
     margin-top: 8rem;
+
+    @include respond(tab-port) {
+      margin-top: 6rem;
+    }
   }
 
   &--huge {
     margin-top: 10rem;
+
+    @include respond(tab-port) {
+      margin-top: 8rem;
+    }
   }
 }

@@ -5,6 +5,11 @@
   box-shadow: 0 2rem 4rem rgba($color: $color-dark, $alpha: 0.2);
   transition: all 0.2s;
 
+  @include respond(tab-port) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
   &__icon {
     padding: 1rem;
     font-size: 6rem;
