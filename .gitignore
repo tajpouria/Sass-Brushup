@@ -2,10 +2,5 @@ node_modules/
 .cache
 yarn.lock
 dist/
-<<<<<<< HEAD
-
-=======
-./Natours/assets/sa-video.mp4
-
-Natours/assets/sa-video.mp4
->>>>>>> 6bde7cfbe756251ff1e6ac25bba6c46706a41ed5
+.Natours/idea/
+Natours/assets/img/

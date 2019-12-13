@@ -6,11 +6,23 @@
       rgba($color-light-green, 0.5),
       rgba($color-dark-green, 0.7)
     ),
-    url(../assets/person.jpg);
+    url(../assets/img/hero-small.jpg);
+
   background-size: cover;
   background-position: top;
   -webkitclip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-green, 0.5),
+        rgba($color-dark-green, 0.7)
+      ),
+      url(../assets/img/hero.jpg);
+  }
 
   @include respond(tab-land) {
     -webkitclip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

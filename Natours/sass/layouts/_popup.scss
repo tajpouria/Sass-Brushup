@@ -10,6 +10,12 @@
   transition: all 0.5s;
   background-color: rgba($color-dark, 0.8);
 
+  @supports (backdrop-filter: blur(10px)) or
+    (-webkit-backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
   &__close-icon {
     font-size: 2rem;
     text-decoration: none;
