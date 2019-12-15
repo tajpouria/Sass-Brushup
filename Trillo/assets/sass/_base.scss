@@ -41,7 +41,12 @@ body {
   );
   background-repeat: no-repeat;
   font-family: "Open Sans", sans-serif;
-  color: var(--grey-light-2);
+  color: var(--grey-dark-2);
   font-weight: 400;
   line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-Primary-dark);
+  color: #fff;
 }

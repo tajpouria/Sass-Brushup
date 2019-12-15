@@ -15,7 +15,7 @@
     font: inherit;
     border-radius: 100px;
     width: 90%;
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 1rem;
     transition: width 0.2s;
 
     &:focus {
@@ -91,6 +91,7 @@
   }
 
   &__notification {
+    color: var(--grey-light-1);
     position: absolute;
     top: 1.7rem;
     right: 1.5rem;
@@ -115,6 +116,7 @@
   margin-top: 3rem;
 
   &__item {
+    color: var(--grey-light-1);
     position: relative;
     display: flex;
     align-items: center;
@@ -143,6 +145,14 @@
       transform: scaleY(10);
       width: 100%;
     }
+
+    &:active::before {
+      background-color: var(--color-Primary-light);
+    }
+
+    &--active {
+      background-color: var(--color-Primary);
+    }
   }
 
   &__icon {
@@ -158,8 +168,7 @@
     margin-left: 1.5rem;
     text-transform: uppercase;
     z-index: 1;
-
-    color: var(--grey-light-1);
+    color: currentColor;
     text-decoration: none;
   }
 }
@@ -171,4 +180,39 @@
   color: var(--grey-dark-3);
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
+}
+
+/////////////////////////////////////////////////
+///////////// HOTEL PIC
+
+.hotel-pic {
+  &__box {
+    display: flex;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+/////////////////////////////////////////////////
+///////////// OVERVIEW
+
+.overview {
+  display: flex;
+
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__star-box {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-Primary);
+  }
 }
