@@ -105,3 +105,70 @@
     font-weight: 500;
   }
 }
+
+/////////////////////////////////////////////////
+///////////// SIDE NAV
+
+.side-nav {
+  list-style: none;
+  width: 100%;
+  margin-top: 3rem;
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0.4rem;
+      height: 10%;
+      background-color: var(--color-Primary);
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s 0.2s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      transform: scaleY(10);
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    z-index: 1;
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__text:link,
+  &__text:visited {
+    font-size: 1.4rem;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    z-index: 1;
+
+    color: var(--grey-light-1);
+    text-decoration: none;
+  }
+}
+
+/////////////////////////////////////////////////
+///////////// LEGAL
+
+.legal {
+  color: var(--grey-dark-3);
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
