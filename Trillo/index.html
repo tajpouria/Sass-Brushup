@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Trillo</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/sass/main.scss" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="assets/img/logo.png" alt="trillo logo" class="header__logo" />
+
+        <form action="#" class="search">
+          <input
+            class="search__input"
+            name="search"
+            placeholder="Search hotels"
+          />
+          <svg class="search__icon">
+            <use xlink:href="assets/img/spirite.svg#icon-search"></use>
+          </svg>
+        </form>
+
+        <nav class="nav">
+          <div class="nav__icon-box">
+            <svg class="nav__icon">
+              <use xlink:href="assets/img/spirite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="nav__notification">4</span>
+          </div>
+
+          <div class="nav__icon-box">
+            <svg class="nav__icon">
+              <use xlink:href="assets/img/spirite.svg#icon-bubbles"></use>
+            </svg>
+            <span class="nav__notification">17</span>
+          </div>
+          <div class="nav__profile-box">
+            <img
+              src="assets/img/user.jpg"
+              alt="profile-pic"
+              class="nav__profile-pic"
+            />
+            <span class="nav__profile-user">
+              Jonas
+            </span>
+          </div>
+        </nav>
+      </header>
+      <div class="content">
+        <nav class="side-bar">
+          SIDEBAR
+        </nav>
+        <main class="hotel-view">HOTEL VIEW</main>
+      </div>
+    </div>
+  </body>
+</html>
