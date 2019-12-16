@@ -49,7 +49,7 @@
     font-size: 1.2rem;
     background-color: #fff;
     margin: 2.5rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
     box-shadow: var(--shadow-light);
   }
 
@@ -88,9 +88,12 @@
 
   &__review-box {
     flex: 0 0 30%;
-    background-color: #fff;
+    background-color: var(--grey-light-3);
     margin: 2.5rem 2.5rem 2.5rem 0;
-    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__friend-box {

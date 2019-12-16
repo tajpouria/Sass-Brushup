@@ -285,3 +285,64 @@
     margin-bottom: 1rem;
   }
 }
+
+/////////////////////////////////////////////////
+///////////// REVIEW
+
+.review {
+  background-color: #fff;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  position: relative;
+  box-shadow: var(--shadow-light);
+
+  &__quote {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user-desc {
+    margin-right: auto;
+  }
+
+  &__pic {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__user-desc-name {
+    font-size: 1.12rem;
+    font-weight: 700;
+  }
+
+  &__user-desc-date {
+    font-size: 1rem;
+    color: var(--grey-dark-2);
+  }
+
+  &__rate {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--color-Primary);
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    color: var(--grey-light-4);
+    font-size: 15rem;
+    top: -60px;
+    left: -10px;
+    font-family: sans-serif;
+  }
+}
