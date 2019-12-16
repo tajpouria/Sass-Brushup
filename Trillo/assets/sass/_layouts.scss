@@ -38,7 +38,82 @@
 
 .hotel-view {
   flex: 1;
+}
 
-  // TEST
-  height: 70rem;
+.hotel-details {
+  display: flex;
+  background-color: var(--grey-light-3);
+
+  &__detail-box {
+    flex: 1;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin: 2.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+  }
+
+  &__features {
+    padding: 2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    margin: 3rem 0;
+  }
+
+  &__feature-items {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      height: 1.2rem;
+      width: 1.2rem;
+      position: relative;
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      // TODO: ADD @SUPPORT
+      background-color: var(--color-Primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+    }
+  }
+
+  &__review-box {
+    flex: 0 0 30%;
+    background-color: #fff;
+    margin: 2.5rem 2.5rem 2.5rem 0;
+    box-shadow: var(--shadow-light);
+  }
+
+  &__friend-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__friend-text {
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__friend-pic {
+    width: 3.25rem;
+    height: 3.25rem;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: 2.5px solid #fff;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
 }
